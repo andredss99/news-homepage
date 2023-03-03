@@ -7,11 +7,11 @@ module.exports = {
             'inter': ["Inter"]
         },
         maxWidth: {
-            'prose': '100ch'
+            'prose': '40ch'
         },
-        /* gridTemplateRows: {
-            'layout': ''
-        } */
+        gridTemplateRows: {
+            'layout': 'auto 8rem'
+        }
     },
     colors: {
         'orange-200': 'hsl(35, 77%, 62%)',
