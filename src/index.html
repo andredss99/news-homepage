@@ -11,9 +11,9 @@
 <title>Frontend Mentor | News homepage</title>
 
 </head>
-<body class="font-inter flex justify-center items-center p-14">
+<body class="font-inter py-12">
 
-    <div class="max-w-[90rem] h-screen">
+    <div class="max-w-[80rem] m-auto">
         <header class="flex justify-between items-center">
             <img src="../assets/images/logo.svg" width="65" height="40" alt="News Homepage Logo">
             <nav class="text-grayish-blue-600 flex gap-12">
@@ -27,38 +27,18 @@
 
         <main class="mt-14">
             <div class="grid grid-cols-3 grid-rows-layout gap-10">
-                <div class="col-span-2">
-                    <img class="" src="../assets/images/image-web-3-desktop.jpg" alt="Main post image">
+                <div class="col-span-2 bg-main-post bg-cover"></div>
 
-                    <div class="flex justify-between mt-10 gap-16">
-                        <h1 class="text-[4rem] leading-none font-extrabold max-w-[9ch]">
-                            The Bright Future of Web 3.0?
-                        </h1>
-
-                        <div class="flex flex-col justify-between">
-                            <p class="text-grayish-blue-600 max-w-prose">
-                                We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
-                            </p>
-
-                            <div class="bg-red-200 w-1/2 h-12 flex justify-center items-center mt-8 hover:cursor-pointer hover:bg-blue-800">
-                                <a href="#" class="text-white-100 font-bold uppercase tracking-widest text-xs">
-                                    Read more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-blue-800 px-7 py-9 flex flex-col">
+                <div class="bg-blue-800 px-7 py-9 flex flex-col justify-between row-span-2">
                     <h2 class="text-orange-200 text-[2.5rem] font-bold">
                         New
                     </h2>
 
                     <div class="flex flex-col">
                         <div class="mt-4 mb-8">
-                            <h4 class="text-white-100 font-bold text-xl">
+                            <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
                                 Hydrogen VS Electric Cars
-                            </h4>
+                            </a>
 
                             <p class="text-grayish-blue-400 mt-4">
                                 Will hydrogen-fueled cars ever catch up to EVs?
@@ -66,9 +46,9 @@
                         </div>
 
                         <div class="border-t border-t-grayish-blue-600 pt-8 mb-8">
-                            <h4 class="text-white-100 font-bold text-xl">
+                            <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
                                 The Downsides of AI Artistry
-                            </h4>
+                            </a>
 
                             <p class="text-grayish-blue-400 mt-4">
                                 What are the possible adverse effects of on-demand AI image generation?
@@ -76,14 +56,32 @@
                         </div>
 
                         <div class="border-t border-t-grayish-blue-600 pt-8">
-                            <h4 class="text-white-100 font-bold text-xl">
+                            <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
                                 Is VC Funding Drying Up?
-                            </h4>
+                            </a>
 
                             <p class="text-grayish-blue-400 mt-4">
                                 Private funding by VC firms is down 50% YOY. We take a look at what that means.
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <h1 class="text-[4rem] leading-none font-extrabold max-w-[9ch]">
+                        The Bright Future of Web 3.0?
+                    </h1>
+                </div>
+
+                <div class="flex flex-col justify-around">
+                    <p class="text-grayish-blue-600 max-w-prose">
+                        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+                    </p>
+
+                    <div class="bg-red-200 w-1/2 h-12 flex justify-center items-center hover:cursor-pointer hover:bg-blue-800">
+                        <a href="#" class="text-white-100 font-bold uppercase tracking-widest text-xs">
+                            Read more
+                        </a>
                     </div>
                 </div>
 

@@ -10,7 +10,10 @@ module.exports = {
             'prose': '40ch'
         },
         gridTemplateRows: {
-            'layout': 'auto 8rem'
+            'layout': 'auto 16rem 8rem'
+        },
+        backgroundImage: {
+            'main-post': "url('../assets/images/image-web-3-desktop.jpg')"
         }
     },
     colors: {
