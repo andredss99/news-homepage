@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="box-border">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -11,23 +11,78 @@
 <title>Frontend Mentor | News homepage</title>
 
 </head>
-<body class="font-inter py-12">
+<body class="font-inter pb-12 sm:pt-12">
+    <div class="navbar-backdrop bg-blue-800 opacity-40 w-full h-full fixed top-0 sm:hidden hidden">
+    </div>
 
-    <div class="max-w-[80rem] m-auto">
+    <nav class="mobile-navbar flex flex-col gap-20 bg-white-100 opacity-100 w-3/4 h-full fixed top-0 right-0 text-lg px-7 py-8 sm:hidden hidden">
+        <button class="navbar-close self-end">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <ul class="flex flex-col gap-8">
+            <li><a class="hover:text-red-200" href="#">Home</a></li>
+            <li><a class="hover:text-red-200" href="#">New</a></li>
+            <li><a class="hover:text-red-200" href="#">Popular</a></li>
+            <li><a class="hover:text-red-200" href="#">Trending</a></li>
+            <li><a class="hover:text-red-200" href="#">Categories</a></li>
+        </ul>
+    </nav>
+
+    <div class="max-w-[80rem] mt-12 sm:mt-0 mx-4 md:m-auto">
         <header class="flex justify-between items-center">
             <img src="../assets/images/logo.svg" width="65" height="40" alt="News Homepage Logo">
-            <nav class="text-grayish-blue-600 flex gap-12">
+
+            <div class="navbar-open cursor-pointer sm:hidden space-y-2">
+                <div class="w-10 h-1 bg-blue-800"></div>
+                <div class="w-10 h-1 bg-blue-800"></div>
+                <div class="w-10 h-1 bg-blue-800"></div>
+            </div>
+
+            <nav class="text-grayish-blue-600 hidden sm:flex sm:gap-12">
                 <a class="hover:text-red-200" href="#">Home</a>
                 <a class="hover:text-red-200" href="#">New</a>
                 <a class="hover:text-red-200" href="#">Popular</a>
                 <a class="hover:text-red-200" href="#">Trending</a>
                 <a class="hover:text-red-200" href="#">Categories</a>
             </nav>
+
+            <!-- <nav class="sm:text-grayish-blue-600 fixed top-0 right-0 w-3/4 h-screen flex flex-col justify-center bg-white-100 text-xl text-blue-800 sm:flex-row sm:gap-12">
+
+
+                <a class="hover:text-red-200" href="#">Home</a>
+                <a class="hover:text-red-200" href="#">New</a>
+                <a class="hover:text-red-200" href="#">Popular</a>
+                <a class="hover:text-red-200" href="#">Trending</a>
+                <a class="hover:text-red-200" href="#">Categories</a>
+            </nav> -->
         </header>
 
-        <main class="mt-14">
-            <div class="grid grid-cols-3 grid-rows-layout gap-10">
-                <div class="col-span-2 bg-main-post bg-cover"></div>
+        <main class="mt-14 w-full">
+            <div class="flex flex-col gap-16 md:grid md:grid-cols-3 md:grid-rows-layout md:gap-10">
+                <section>
+                    <div class="col-span-2 bg-main-post-mobile sm:bg-main-post bg-cover w-full h-80"></div>
+
+                    <div class="flex items-center">
+                        <h1 class="text-[2.75rem] md:text-[3.5rem] lg:text-[4rem] leading-none font-extrabold mt-7">
+                            The Bright Future of Web 3.0?
+                        </h1>
+                    </div>
+
+                    <div class="flex flex-col justify-around">
+                        <p class="text-grayish-blue-600 max-w-prose mt-7">
+                            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+                        </p>
+
+                        <div class="bg-red-200 w-1/2 h-12 flex justify-center items-center mt-7 hover:cursor-pointer hover:bg-blue-800">
+                            <a href="#" class="text-white-100 font-bold uppercase tracking-widest text-xs">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </section>
 
                 <div class="bg-blue-800 px-7 py-9 flex flex-col justify-between row-span-2">
                     <h2 class="text-orange-200 text-[2.5rem] font-bold">
@@ -67,82 +122,68 @@
                     </div>
                 </div>
 
-                <div class="flex items-center">
-                    <h1 class="text-[4rem] leading-none font-extrabold max-w-[9ch]">
-                        The Bright Future of Web 3.0?
-                    </h1>
-                </div>
+                <section class="flex flex-col gap-7">
+                    <div class="flex gap-6">
+                        <img class="w-1/5 md:w-1/2 object-cover" src="../assets/images/image-retro-pcs.jpg" alt="">
 
-                <div class="flex flex-col justify-around">
-                    <p class="text-grayish-blue-600 max-w-prose">
-                        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
-                    </p>
+                        <div class="flex flex-col">
+                            <span class="text-3xl text-grayish-blue-400 font-bold">01</span>
 
-                    <div class="bg-red-200 w-1/2 h-12 flex justify-center items-center hover:cursor-pointer hover:bg-blue-800">
-                        <a href="#" class="text-white-100 font-bold uppercase tracking-widest text-xs">
-                            Read more
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex gap-6">
-                    <img class="" src="../assets/images/image-retro-pcs.jpg" alt="">
-
-                    <div class="flex flex-col justify-between">
-                        <span class="text-3xl text-grayish-blue-400 font-bold">01</span>
-
-                        <div>
-                            <h5 class="font-bold text-blue-800 text-lg">
-                                <a class="hover:text-red-200" href="#">
-                                    Reviving Retro PCs
-                                </a>
-                            </h5>
-                            <p>
-                                What happens when old PCs are given modern upgrades?
-                            </p>
+                            <div>
+                                <h5 class="font-bold text-blue-800 text-lg">
+                                    <a class="hover:text-red-200" href="#">
+                                        Reviving Retro PCs
+                                    </a>
+                                </h5>
+                                <p>
+                                    What happens when old PCs are given modern upgrades?
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="flex gap-6">
-                    <img src="../assets/images/image-top-laptops.jpg" alt="">
+                    <div class="flex gap-6">
+                        <img class="w-1/5 md:w-1/2 object-cover" src="../assets/images/image-top-laptops.jpg" alt="">
 
-                    <div class="flex flex-col justify-between">
-                        <span class="text-3xl text-grayish-blue-400 font-bold">02</span>
-                        
-                        <div>
-                            <h5 class="font-bold text-blue-800 text-lg">
-                                <a class="hover:text-red-200" href="#">
-                                    Top 10 Laptops of 2022
-                                </a>
-                            </h5>
-                            <p>
-                                Our best picks for various needs and budgets.
-                            </p>
+                        <div class="flex flex-col">
+                            <span class="text-3xl text-grayish-blue-400 font-bold">02</span>
+                            
+                            <div>
+                                <h5 class="font-bold text-blue-800 text-lg">
+                                    <a class="hover:text-red-200" href="#">
+                                        Top 10 Laptops of 2022
+                                    </a>
+                                </h5>
+                                <p>
+                                    Our best picks for various needs and budgets.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="flex gap-6">
-                    <img src="../assets/images/image-gaming-growth.jpg" alt="">
+                    <div class="flex gap-6">
+                        <img class="w-1/5 md:w-1/2 object-cover" src="../assets/images/image-gaming-growth.jpg" alt="">
 
-                    <div class="flex flex-col justify-between">
-                        <span class="text-3xl text-grayish-blue-400 font-bold">03</span>
+                        <div class="flex flex-col">
+                            <span class="text-3xl text-grayish-blue-400 font-bold">03</span>
 
-                        <div>
-                            <h5 class="font-bold text-blue-800 text-lg">
-                                <a href="#" class="hover:text-red-200">
-                                    The Growth of Gaming
-                                </a>
-                            </h5>
-                            <p>
-                                How the pandemic has sparked fresh opportunities.
-                            </p>
+                            <div>
+                                <h5 class="font-bold text-blue-800 text-lg">
+                                    <a href="#" class="hover:text-red-200">
+                                        The Growth of Gaming
+                                    </a>
+                                </h5>
+                                <p>
+                                    How the pandemic has sparked fresh opportunities.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
     </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>

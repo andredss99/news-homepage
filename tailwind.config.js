@@ -13,7 +13,8 @@ module.exports = {
             'layout': 'auto 16rem 8rem'
         },
         backgroundImage: {
-            'main-post': "url('../assets/images/image-web-3-desktop.jpg')"
+            'main-post': "url('../assets/images/image-web-3-desktop.jpg')",
+            'main-post-mobile': "url('../assets/images/image-web-3-mobile.jpg')"
         }
     },
     colors: {
