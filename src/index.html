@@ -11,9 +11,8 @@
 <title>Frontend Mentor | News homepage</title>
 
 </head>
-<body class="font-inter pb-12 sm:pt-12">
-    <div class="navbar-backdrop bg-blue-800 opacity-40 w-full h-full fixed top-0 sm:hidden hidden">
-    </div>
+<body class="font-inter">
+    <div class="navbar-backdrop bg-blue-800 opacity-40 w-full h-full fixed top-0 sm:hidden hidden"></div>
 
     <nav class="mobile-navbar flex flex-col gap-20 bg-white-100 opacity-100 w-3/4 h-full fixed top-0 right-0 text-lg px-7 py-8 sm:hidden hidden">
         <button class="navbar-close self-end">
@@ -31,102 +30,90 @@
         </ul>
     </nav>
 
-    <div class="max-w-[80rem] mt-12 sm:mt-0 mx-4 md:m-auto">
-        <header class="flex justify-between items-center">
-            <img src="../assets/images/logo.svg" width="65" height="40" alt="News Homepage Logo">
+    <div class="h-screen py-12">
+        <div class="max-w-6xl max-h-fit mt-12 sm:mt-0 lg:m-auto p-4">
+            <header class="flex justify-between items-center">
+                <img src="../assets/images/logo.svg" width="65" height="40" alt="News Homepage Logo">
 
-            <div class="navbar-open cursor-pointer sm:hidden space-y-2">
-                <div class="w-10 h-1 bg-blue-800"></div>
-                <div class="w-10 h-1 bg-blue-800"></div>
-                <div class="w-10 h-1 bg-blue-800"></div>
-            </div>
+                <div class="navbar-open cursor-pointer sm:hidden space-y-2">
+                    <div class="w-10 h-1 bg-blue-800"></div>
+                    <div class="w-10 h-1 bg-blue-800"></div>
+                    <div class="w-10 h-1 bg-blue-800"></div>
+                </div>
 
-            <nav class="text-grayish-blue-600 hidden sm:flex sm:gap-12">
-                <a class="hover:text-red-200" href="#">Home</a>
-                <a class="hover:text-red-200" href="#">New</a>
-                <a class="hover:text-red-200" href="#">Popular</a>
-                <a class="hover:text-red-200" href="#">Trending</a>
-                <a class="hover:text-red-200" href="#">Categories</a>
-            </nav>
+                <nav class="text-grayish-blue-600 hidden sm:flex sm:gap-12">
+                    <a class="hover:text-red-200" href="#">Home</a>
+                    <a class="hover:text-red-200" href="#">New</a>
+                    <a class="hover:text-red-200" href="#">Popular</a>
+                    <a class="hover:text-red-200" href="#">Trending</a>
+                    <a class="hover:text-red-200" href="#">Categories</a>
+                </nav>
+            </header>
 
-            <!-- <nav class="sm:text-grayish-blue-600 fixed top-0 right-0 w-3/4 h-screen flex flex-col justify-center bg-white-100 text-xl text-blue-800 sm:flex-row sm:gap-12">
+            <main class="mt-14 w-full">
+                <div class="flex flex-col md:grid md:grid-cols-3 md:grid-rows-layout md:gap-10">
+                    <div class="bg-main-post-mobile sm:bg-main-post bg-cover h-80 md:h-full row-start-1 col-start-1 col-span-2"></div>
 
-
-                <a class="hover:text-red-200" href="#">Home</a>
-                <a class="hover:text-red-200" href="#">New</a>
-                <a class="hover:text-red-200" href="#">Popular</a>
-                <a class="hover:text-red-200" href="#">Trending</a>
-                <a class="hover:text-red-200" href="#">Categories</a>
-            </nav> -->
-        </header>
-
-        <main class="mt-14 w-full">
-            <div class="flex flex-col gap-16 md:grid md:grid-cols-3 md:grid-rows-layout md:gap-10">
-                <section>
-                    <div class="col-span-2 bg-main-post-mobile sm:bg-main-post bg-cover w-full h-80"></div>
-
-                    <div class="flex items-center">
-                        <h1 class="text-[2.75rem] md:text-[3.5rem] lg:text-[4rem] leading-none font-extrabold mt-7">
+                    <!-- <div class="flex items-center row-start-2 col-start-1"> -->
+                        <h1 class="text-[2.75rem] md:text-[3.5rem] leading-none font-extrabold row-start-2 col-start-1 lg:max-w-[20ch] mt-8 md:mt-0">
                             The Bright Future of Web 3.0?
                         </h1>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="flex flex-col justify-around">
-                        <p class="text-grayish-blue-600 max-w-prose mt-7">
+                    <div class="flex flex-col row-start-2 col-start-2">
+                        <p class="text-grayish-blue-600 max-w-prose sm:max-lg:max-w-full mt-4 md:mt-0">
                             We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
                         </p>
 
                         <div class="bg-red-200 w-1/2 h-12 flex justify-center items-center mt-7 hover:cursor-pointer hover:bg-blue-800">
-                            <a href="#" class="text-white-100 font-bold uppercase tracking-widest text-xs">
+                            <a href="#" class="text-white-100 font-bold uppercase tracking-widest text-xs text-center"> <!-- Entre 1024 e 640 deixar 100% width -->
                                 Read more
                             </a>
                         </div>
                     </div>
-                </section>
 
-                <div class="bg-blue-800 px-7 py-9 flex flex-col justify-between row-span-2">
-                    <h2 class="text-orange-200 text-[2.5rem] font-bold">
-                        New
-                    </h2>
-
-                    <div class="flex flex-col">
-                        <div class="mt-4 mb-8">
-                            <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
-                                Hydrogen VS Electric Cars
-                            </a>
-
-                            <p class="text-grayish-blue-400 mt-4">
-                                Will hydrogen-fueled cars ever catch up to EVs?
-                            </p>
-                        </div>
-
-                        <div class="border-t border-t-grayish-blue-600 pt-8 mb-8">
-                            <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
-                                The Downsides of AI Artistry
-                            </a>
-
-                            <p class="text-grayish-blue-400 mt-4">
-                                What are the possible adverse effects of on-demand AI image generation?
-                            </p>
-                        </div>
-
-                        <div class="border-t border-t-grayish-blue-600 pt-8">
-                            <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
-                                Is VC Funding Drying Up?
-                            </a>
-
-                            <p class="text-grayish-blue-400 mt-4">
-                                Private funding by VC firms is down 50% YOY. We take a look at what that means.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <section class="flex flex-col gap-7">
-                    <div class="flex gap-6">
-                        <img class="w-1/5 md:w-1/2 object-cover" src="../assets/images/image-retro-pcs.jpg" alt="">
+                    <div class="bg-blue-800 px-7 py-9 flex flex-col justify-between col-start-3 row-start-1 row-span-2 mt-16 md:mt-0">
+                        <h2 class="text-orange-200 text-[2.5rem] font-bold">
+                            New
+                        </h2>
 
                         <div class="flex flex-col">
+                            <div class="mt-4 mb-8">
+                                <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
+                                    Hydrogen VS Electric Cars
+                                </a>
+
+                                <p class="text-grayish-blue-400 mt-4">
+                                    Will hydrogen-fueled cars ever catch up to EVs?
+                                </p>
+                            </div>
+
+                            <div class="border-t border-t-grayish-blue-600 pt-8 mb-8">
+                                <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
+                                    The Downsides of AI Artistry
+                                </a>
+
+                                <p class="text-grayish-blue-400 mt-4">
+                                    What are the possible adverse effects of on-demand AI image generation?
+                                </p>
+                            </div>
+
+                            <div class="border-t border-t-grayish-blue-600 pt-8">
+                                <a class="text-white-100 font-bold text-xl hover:text-orange-200" href="#">
+                                    Is VC Funding Drying Up?
+                                </a>
+
+                                <p class="text-grayish-blue-400 mt-4">
+                                    Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 mt-16 md:mt-0">
+                        <img class="w-24 object-cover" src="../assets/images/image-retro-pcs.jpg" alt="">
+
+                        <div class="flex flex-col justify-between">
                             <span class="text-3xl text-grayish-blue-400 font-bold">01</span>
 
                             <div>
@@ -135,36 +122,36 @@
                                         Reviving Retro PCs
                                     </a>
                                 </h5>
-                                <p>
+                                <p class="text-grayish-blue-600">
                                     What happens when old PCs are given modern upgrades?
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
-                        <img class="w-1/5 md:w-1/2 object-cover" src="../assets/images/image-top-laptops.jpg" alt="">
+                    <div class="flex gap-6 mt-8 md:mt-0">
+                        <img class="w-24 object-cover" width="90" height="90" src="../assets/images/image-top-laptops.jpg" alt="">
 
-                        <div class="flex flex-col">
+                        <div class="flex flex-col justify-between">
                             <span class="text-3xl text-grayish-blue-400 font-bold">02</span>
-                            
+
                             <div>
                                 <h5 class="font-bold text-blue-800 text-lg">
                                     <a class="hover:text-red-200" href="#">
                                         Top 10 Laptops of 2022
                                     </a>
                                 </h5>
-                                <p>
+                                <p class="text-grayish-blue-600">
                                     Our best picks for various needs and budgets.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
-                        <img class="w-1/5 md:w-1/2 object-cover" src="../assets/images/image-gaming-growth.jpg" alt="">
+                    <div class="flex gap-6 mt-8 md:mt-0">
+                        <img class="w-24 object-cover" width="90" height="90" src="../assets/images/image-gaming-growth.jpg" alt="">
 
-                        <div class="flex flex-col">
+                        <div class="flex flex-col justify-between">
                             <span class="text-3xl text-grayish-blue-400 font-bold">03</span>
 
                             <div>
@@ -173,15 +160,15 @@
                                         The Growth of Gaming
                                     </a>
                                 </h5>
-                                <p>
+                                <p class="text-grayish-blue-600">
                                     How the pandemic has sparked fresh opportunities.
                                 </p>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </main>
+                </div>
+            </main>
+        </div>
     </div>
 
     <script src="./index.js"></script>
